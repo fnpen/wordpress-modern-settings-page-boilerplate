@@ -17,7 +17,10 @@ import {
 import { __ } from '@wordpress/i18n';
 
 import { useCallback, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { backendRequest } from '../utils/backendRequest';
+import readMe from './../../README.md';
 
 export const Home = () => {
 	const [noticeVisible, setNoticeVisible] = useState(!MODERN_SETTINGS['notice_hidden']);
@@ -71,6 +74,15 @@ export const Home = () => {
 			<Spacer marginBottom={10} />
 			<Card>
 				<CardHeader>
+					<Heading>{__('GitHub README.md', 'wp-modern-settings-page-boilerplate')}</Heading>
+				</CardHeader>
+				<CardBody>
+					<ReactMarkdown children={readMe} remarkPlugins={[remarkGfm]} />
+				</CardBody>
+			</Card>
+			<Spacer marginBottom={10} />
+			<Card>
+				<CardHeader>
 					<Heading>
 						{__('Card with Different Components', 'wp-modern-settings-page-boilerplate')}
 					</Heading>
@@ -94,25 +106,7 @@ export const Home = () => {
 						)}
 					</Text>
 				</CardBody>
-				<CardBody>
-					<Text numberOfLines={2} truncate>
-						{__(
-							`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis dictum
-						tortor, eu tincidunt justo scelerisque tincidunt. Duis semper dui id augue
-						malesuada, ut feugiat nisi aliquam. Vestibulum venenatis diam sem, finibus
-						dictum massa semper in. Nulla facilisi. Nunc vulputate faucibus diam, in
-						lobortis arcu ornare vel. In dignissim nunc sed facilisis finibus. Etiam
-						imperdiet mattis arcu, sed rutrum sapien blandit gravida. Aenean
-						sollicitudin neque eget enim blandit, sit amet rutrum leo vehicula. Nunc
-						malesuada ultricies eros ut faucibus. Aliquam erat volutpat. Nulla nec
-						feugiat risus. Vivamus iaculis dui aliquet ante ultricies feugiat.
-						Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-						cubilia curae; Vivamus nec pretium velit, sit amet consectetur ante.
-						Praesent porttitor ex eget fermentum mattis.`,
-							'wp-modern-settings-page-boilerplate'
-						)}
-					</Text>
-				</CardBody>
+				<CardBody></CardBody>
 				<CardDivider />
 				<CardBody>
 					<Text>{__('CardBody (after CardDivider)', 'wp-modern-settings-page-boilerplate')}</Text>

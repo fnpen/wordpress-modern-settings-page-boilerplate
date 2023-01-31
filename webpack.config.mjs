@@ -28,6 +28,12 @@ const createConfig = ({ name, entry, dir, externals }) => {
 					test: /\.(bmp|png|jpe?g|gif)$/i,
 					type: 'asset/inline',
 				},
+				{
+					test: /\.md$/i,
+					// resourceQuery: /raw/,
+					// use: 'raw-loader',
+					type: 'asset/source',
+				},
 				...defaultConfig.module.rules,
 			],
 		},
