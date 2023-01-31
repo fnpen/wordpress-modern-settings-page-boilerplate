@@ -4,28 +4,32 @@ Creating the boilerplate of plugin or theme settings page using WordPress packag
 
 # What's inside
 
-* Keep as simple as possible
-	* No state manager
+* 🤹🏻  Keep as simple as possible
+	* No state manager in boilerplate - it's recommended on your project, but you can use whether or not as you like.
 
-* Close design and UX to WordPress and Gutenberg
-	* Components from **@wordpress/components**.
+* 👥  Close design and UX to WordPress and Gutenberg
+	* 🥞  Components from **@wordpress/components**.
 
-* Lightweght assets
+* 🪶  Lightweght assets
 	* Using **wp-scripts** package with WebPack underhood to build bundle with minification on production mode
 	* Loads embedded to WordPress React, @wordpress/components libraries and jQuery without including to final bundle
 	* jQuery to perform ajax requests - we can use any package, but we already have it on backend.
 	* Using @wordpress/i18n for i18n capatible translations.
 
-* PostCSS with stage-0 features to use any CSS-next features
+* 🧑‍🎨  PostCSS with stage-0 features to use any CSS-next features
 
-* Great developer experience
-	* Supports React Hot Module Reload to refresh components without reloading the page.
+* ⚡  Great developer experience
+	* 🚀 Supports React Hot Module Reload to refresh components without reloading the page.
 
-* Translation Ready
-	* [x] Use @wordpress/i18n and __();
-	* [ ] Generate pot and json files for translation
+* 🔬  Coding standarts
+	* Phpcs and wp-coding-standards is available
+	* Prettier is used to format js, css files
 
-# How to try on my WordPress site?
+* 🌏  Translation Ready
+	* [x] 📝  Use @wordpress/i18n and __();
+	* [ ] 📥  Generate pot and json files for translation
+
+# How to try on my WordPress site? 🤔 
 
 Clone the repo using next command to your `wp-content/plugins/` directory:
 
@@ -36,7 +40,7 @@ git clone https://github.com/fnpen/wp-modern-settings-page-boilerplate-internal.
 Enable plugin 'Modern Settings Page Boilerplate for WordPress' and click to 'Modern Settings' menu item.
 
 
-# How to modify and build?
+# How to modify and build bundle? 😎 
 
 Install nodejs and npm to your system,
 
@@ -45,7 +49,7 @@ Install all packages :
 ```
 npm install
 
-// if you use pnpm
+// if you use pnpm:
 
 pnpm i
 ```
@@ -56,6 +60,10 @@ Use the next command to build the bundle in development mode:
 npm run start
 ```
 
+# 🥳 
+
+Have a great time with developing!
+
 > The bundle will be rebuilt on any file change.
 
 Use the next command to build the bundle in production mode:
@@ -64,7 +72,7 @@ Use the next command to build the bundle in production mode:
 npm build
 ```
 
-## Using Hot Module Reload mode
+## Using Hot Module Reload mode 🤔 
 
 Install mkcert on your system using the next manual: [https://github.com/FiloSottile/mkcert](https://github.com/FiloSottile/mkcert#installation)
 
