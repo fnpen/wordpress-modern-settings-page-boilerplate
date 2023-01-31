@@ -28,7 +28,7 @@ export const RepeatedItem = ({ item }) => {
 						<Flex align={'center'}>
 							<DropdownMenu
 								icon={moreVertical}
-								label={'Actions'}
+								label={__('Actions', 'wp-modern-settings-page-boilerplate')}
 								toggleProps={{
 									isSmall: true,
 									iconSize: 16,
@@ -45,7 +45,10 @@ export const RepeatedItem = ({ item }) => {
 														onClose();
 													}}
 												>
-													Reset
+													{__(
+														'Reset',
+														'wp-modern-settings-page-boilerplate'
+													)}
 												</MenuItem>
 											)}
 											<MenuItem
@@ -55,7 +58,10 @@ export const RepeatedItem = ({ item }) => {
 													onClose();
 												}}
 											>
-												Remove
+												{__(
+													'Remove',
+													'wp-modern-settings-page-boilerplate'
+												)}
 											</MenuItem>
 										</MenuGroup>
 									</>
@@ -67,27 +73,42 @@ export const RepeatedItem = ({ item }) => {
 			</CardHeader>
 			<CardBody>
 				<TextControl
-					label={'Widget Title'}
+					label={__('Widget Title', 'wp-modern-settings-page-boilerplate')}
 					onChange={(v) => changeItem([id, 'title', v])}
 					value={title ?? ''}
 				/>
 				<TextareaControl
-					label={'Widget Content'}
-					help="You can use HTML markup with links."
+					label={__('Widget Content', 'wp-modern-settings-page-boilerplate')}
+					help={__(
+						'You can use HTML markup with links.',
+						'wp-modern-settings-page-boilerplate'
+					)}
 					value={description ?? ''}
 					rows="4"
 					onChange={(v) => changeItem([id, 'description', v])}
 				/>
 				<ToggleGroupControl
-					label={'Priority'}
+					label={__('Priority', 'wp-modern-settings-page-boilerplate')}
 					value={priority ?? ''}
 					onChange={(v) => changeItem([id, 'priority', v])}
 					isBlock
 				>
-					<ToggleGroupControlOption value="" label="Top" />
-					<ToggleGroupControlOption value="high" label="High" />
-					<ToggleGroupControlOption value="default" label="Default" />
-					<ToggleGroupControlOption value="low" label="Low" />
+					<ToggleGroupControlOption
+						value=""
+						label={__('Top', 'wp-modern-settings-page-boilerplate')}
+					/>
+					<ToggleGroupControlOption
+						value="high"
+						label={__('High', 'wp-modern-settings-page-boilerplate')}
+					/>
+					<ToggleGroupControlOption
+						value="default"
+						label={__('Default', 'wp-modern-settings-page-boilerplate')}
+					/>
+					<ToggleGroupControlOption
+						value="low"
+						label={__('Low', 'wp-modern-settings-page-boilerplate')}
+					/>
 				</ToggleGroupControl>
 			</CardBody>
 		</Card>

@@ -54,7 +54,7 @@ sample({
 
 sample({
 	clock: saveToServer.done,
-	fn: () => ({ content: 'Simple Form Saved.' }),
+	fn: () => ({ content: __('Simple Form Saved.', 'wp-modern-settings-page-boilerplate') }),
 	target: addNotice,
 });
 
@@ -72,19 +72,25 @@ export const SimpleForm = () => {
 			<CardBody>
 				<Disabled isDisabled={isSaving}>
 					<TextControl
-						help="Help text to explain the input."
-						label="Label Text"
+						help={__(
+							'Help text to explain the input.',
+							'wp-modern-settings-page-boilerplate'
+						)}
+						label={__('Label Text', 'wp-modern-settings-page-boilerplate')}
 						onChange={nameChanged}
 						value={name}
 					/>
 					<TextareaControl
-						label="Text"
-						help="Enter some text"
+						label={__('Text', 'wp-modern-settings-page-boilerplate')}
+						help={__('Enter some text', 'wp-modern-settings-page-boilerplate')}
 						value={description}
 						onChange={descriptionChanged}
 					/>
 					<CheckboxControl
-						label="Check to throw server error"
+						label={__(
+							'Check to throw server error',
+							'wp-modern-settings-page-boilerplate'
+						)}
 						checked={throwError}
 						onChange={throwErrorChanged}
 					/>

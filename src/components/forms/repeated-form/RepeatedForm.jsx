@@ -31,13 +31,19 @@ export const RepeatedForm = () => {
 			<CardBody>
 				<Disabled isDisabled={isSaving}>
 					<TextControl
-						help="Help text to explain the input."
-						label="Label Text"
+						help={__(
+							'Help text to explain the input.',
+							'wp-modern-settings-page-boilerplate'
+						)}
+						label={__('Label Text', 'wp-modern-settings-page-boilerplate')}
 						onChange={nameChanged}
 						value={name}
 					/>
 
-					<BaseControl label="Widgets" __nextHasNoMarginBottom={true}>
+					<BaseControl
+						label={__('Widgets', 'wp-modern-settings-page-boilerplate')}
+						__nextHasNoMarginBottom={true}
+					>
 						<Card isBorderless={items.length > 0}>
 							{items.length ? (
 								<>

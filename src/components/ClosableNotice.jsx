@@ -11,6 +11,7 @@ const doHideNotice = createEffect(() =>
 	})
 );
 $noticeVisible.on(doHideNotice.doneData, (_, result) => !result);
+
 export const ClosableNotice = () => {
 	const noticeVisible = useStore($noticeVisible);
 	return (

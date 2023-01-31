@@ -1,8 +1,8 @@
 {
   "name": "@fnpen/wp-modern-settings-page-boilerplate",
   "version": "0.0.1",
-  "private": true,
-  "homepage": ".",
+  "private": false,
+  "homepage": "https://github.com/fnpen/wp-modern-settings-page-boilerplate",
   "scripts": {
     "build": "wp-scripts build --config webpack.config.mjs",
     "start": "wp-scripts start --config webpack.config.mjs",

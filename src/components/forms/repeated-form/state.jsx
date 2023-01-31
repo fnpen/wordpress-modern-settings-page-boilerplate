@@ -67,6 +67,6 @@ sample({
 });
 sample({
 	clock: saveToServer.done,
-	fn: () => ({ content: 'Repeated Form Saved.' }),
+	fn: () => ({ content: __('Repeated Form Saved.', 'wp-modern-settings-page-boilerplate') }),
 	target: addNotice,
 });
