@@ -7,7 +7,7 @@ import './styles/styles.css';
 export const App = () => {
 	return (
 		<Layout
-			title={__('Modern Settings', 'wp-modern-settings-page-boilerplate')}
+			title={__('Modern Settings 🚀', 'wp-modern-settings-page-boilerplate')}
 			tabs={[
 				{ name: 'home', title: __('Home', 'wp-modern-settings-page-boilerplate') },
 				{ name: 'settings', title: __('Settings', 'wp-modern-settings-page-boilerplate') },
