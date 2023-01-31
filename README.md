@@ -1,8 +1,12 @@
-# Motivation
+![image](https://user-images.githubusercontent.com/31767378/215863909-84b2b49c-66ac-4836-b3e7-36b3f9769445.png)
+
+# Modern Settings Page Boilerplate for WordPress
+
+## Motivation
 
 Creating the boilerplate of plugin or theme settings page using WordPress packages and make UI and UX close to WordPress and Gutenberg backend.
 
-# What's inside
+## What's inside
 
 * 🤹🏻  Keep as simple as possible
 
@@ -26,6 +30,7 @@ Creating the boilerplate of plugin or theme settings page using WordPress packag
 
 * Form Examples
 	* Simple form - form with couple fields.
+	* Repeatble form
 
 * 🔬  Coding standarts
 	* Phpcs and wp-coding-standards is available
@@ -35,7 +40,7 @@ Creating the boilerplate of plugin or theme settings page using WordPress packag
 	* [x] 📝  Use @wordpress/i18n and __();
 	* [ ] 📥  Generate pot and json files for translation
 
-# How to try on my WordPress site? 🤔 
+## How to try on my WordPress site? 🤔 
 
 Clone the repo using next command to your `wp-content/plugins/` directory:
 
@@ -45,8 +50,12 @@ git clone https://github.com/fnpen/wp-modern-settings-page-boilerplate-internal.
 
 Enable plugin 'Modern Settings Page Boilerplate for WordPress' and click to 'Modern Settings' menu item.
 
+## More Examples
 
-# How to modify and build bundle? 😎 
+![image](https://user-images.githubusercontent.com/31767378/215864843-f2545b3f-3b81-46a9-8845-d4cef08c5fad.png)
+
+
+## How to modify and build bundle? 😎 
 
 Install nodejs and npm to your system,
 
