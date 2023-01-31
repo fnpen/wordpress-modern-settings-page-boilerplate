@@ -45,7 +45,7 @@ Creating the boilerplate of plugin or theme settings page using WordPress packag
 Clone the repo using next command to your `wp-content/plugins/` directory:
 
 ```
-git clone https://github.com/fnpen/wp-modern-settings-page-boilerplate-internal.git
+git clone https://github.com/fnpen/wp-modern-settings-page-boilerplate.git
 ```
 
 Enable plugin 'Modern Settings Page Boilerplate for WordPress' and click to 'Modern Settings' menu item.

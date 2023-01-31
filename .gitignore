@@ -1,10 +1,6 @@
 .DS_Store
 .idea
-
-# Javascript
 node_modules
-dist
-build
 vendor
 .env
 .env.*
