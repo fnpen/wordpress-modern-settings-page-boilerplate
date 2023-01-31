@@ -1,0 +1,13 @@
+.modern-settings {
+	& #wpcontent,
+	&.auto-fold #wpcontent {
+		padding-left: 0;
+	}
+
+	& .modern-settings-layout {
+		& .modern-settings-layout-body {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+	}
+}

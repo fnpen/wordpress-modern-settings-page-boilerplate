@@ -1,9 +1,8 @@
 import { __ } from '@wordpress/i18n';
 import { Layout } from './components/Layout';
-
 import { Home } from './pages/Home';
 import { Settings } from './pages/Settings';
-import './styles.css';
+import './styles/styles.css';
 
 export const App = () => {
 	return (

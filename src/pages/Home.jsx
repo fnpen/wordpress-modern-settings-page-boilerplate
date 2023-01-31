@@ -1,4 +1,3 @@
-// import { Text } from '@wordpress/block-editor';
 import {
 	Button,
 	Card,
@@ -32,10 +31,7 @@ export const Home = () => {
 		<>
 			{noticeVisible && (
 				<Notice onRemove={doHideNotice}>
-					{__(
-						'Thank you for trying this boilerplate!',
-						'wp-modern-settings-page-boilerplate'
-					)}
+					{__('Thank you for trying this boilerplate!', 'wp-modern-settings-page-boilerplate')}
 				</Notice>
 			)}
 
@@ -53,10 +49,7 @@ export const Home = () => {
 					</p>
 					<p>
 						<span>
-							{__(
-								'The storybook of available components: ',
-								'wp-modern-settings-page-boilerplate'
-							)}
+							{__('The storybook of available components: ', 'wp-modern-settings-page-boilerplate')}
 						</span>
 						<a href="https://wordpress.github.io/gutenberg/" target="_blank">
 							https://wordpress.github.io/gutenberg/
@@ -79,10 +72,7 @@ export const Home = () => {
 			<Card>
 				<CardHeader>
 					<Heading>
-						{__(
-							'Card with Different Components',
-							'wp-modern-settings-page-boilerplate'
-						)}
+						{__('Card with Different Components', 'wp-modern-settings-page-boilerplate')}
 					</Heading>
 				</CardHeader>
 				<CardBody>
@@ -125,9 +115,7 @@ export const Home = () => {
 				</CardBody>
 				<CardDivider />
 				<CardBody>
-					<Text>
-						{__('CardBody (after CardDivider)', 'wp-modern-settings-page-boilerplate')}
-					</Text>
+					<Text>{__('CardBody (after CardDivider)', 'wp-modern-settings-page-boilerplate')}</Text>
 				</CardBody>
 				<CardMedia>
 					<img
@@ -137,9 +125,7 @@ export const Home = () => {
 				</CardMedia>
 				<CardFooter>
 					<Text>{__('CardFooter', 'wp-modern-settings-page-boilerplate')}</Text>
-					<Button variant="link">
-						{__('Link Button', 'wp-modern-settings-page-boilerplate')}
-					</Button>
+					<Button variant="link">{__('Link Button', 'wp-modern-settings-page-boilerplate')}</Button>
 					<Button variant="secondary">
 						{__('Secondary Button', 'wp-modern-settings-page-boilerplate')}
 					</Button>

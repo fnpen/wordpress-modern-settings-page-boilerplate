@@ -25,8 +25,6 @@ function admin_menu() {
  * @return void
  */
 function wp_enqueue_scripts() {
-	wp_enqueue_media();
-
 	enqueue_scripts_from_asset_file( 'settings', MODERN_SETTINGS_PLUGIN_FILE );
 
 	wp_localize_script( 'wp-modern-settings-page-boilerplate-settings', 'MODERN_SETTINGS', apply_filters( 'modern_settings_variables', [] ) );

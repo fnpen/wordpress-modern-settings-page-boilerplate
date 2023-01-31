@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <ruleset name="Coding standards">
-	<config name="testVersion" value="7.0-"/>
+	<config name="testVersion" value="7.1-"/>
 
-	<file>christmas-snow-3d.php</file>
+	<file>wp-modern-settings-page-boilerplate.php</file>
 	<exclude-pattern>build/*</exclude-pattern>
 	<exclude-pattern>vendor/*</exclude-pattern>
 	<exclude-pattern>node_modules/*</exclude-pattern>

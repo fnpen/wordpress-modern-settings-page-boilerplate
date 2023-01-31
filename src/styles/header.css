@@ -1,0 +1,23 @@
+.modern-settings-header {
+	text-align: center;
+	margin: 0 0 2rem;
+	background: #fff;
+	border-bottom: 1px solid #dcdcde;
+
+	& .modern-settings-title-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		clear: both;
+		padding-top: 8px;
+
+		& h1 {
+			display: inline-block;
+			font-weight: 600;
+			margin: 0 0.8rem 1rem;
+			font-size: 23px;
+			padding: 9px 0 4px;
+			line-height: 1.3;
+		}
+	}
+}
