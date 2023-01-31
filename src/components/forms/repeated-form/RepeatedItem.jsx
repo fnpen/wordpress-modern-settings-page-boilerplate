@@ -13,6 +13,7 @@ import {
 	__experimentalToggleGroupControl as ToggleGroupControl,
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
 } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
 import { close, moreVertical, reset } from '@wordpress/icons';
 import { changeItem, removeItem, resetItem } from './state';
 

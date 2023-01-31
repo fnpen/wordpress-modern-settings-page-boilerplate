@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { combine, createEffect, createEvent, createStore, sample } from 'effector';
 import produce from 'immer';
 import { backendRequest } from '../../../utils/backendRequest';
