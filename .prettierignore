@@ -1,0 +1,9 @@
+*.*
+!*.css
+!*.scss
+!*.js
+!*.json
+!*.jsx
+!*.html
+*.min.*
+build

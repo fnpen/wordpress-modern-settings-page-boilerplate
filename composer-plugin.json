@@ -1,0 +1,10 @@
+{
+  "name": "fnpen/wp-modern-settings-page-boilerplate",
+  "description": "",
+  "type": "wordpress-plugin",
+  "license": "ISC",
+  "version": "0.0.1",
+  "require": {
+    "php": ">=7.1"
+  }
+}

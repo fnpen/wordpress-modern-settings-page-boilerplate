@@ -1,0 +1,26 @@
+{
+  "name": "fnpen/wp-modern-settings-page-boilerplate",
+  "description": "",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0-or-later",
+  "version": "0.8.3",
+  "require": {
+    "php": ">=7.1",
+    "yahnis-elsts/plugin-update-checker": "dev-master"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "~3.6.2",
+    "wp-coding-standards/wpcs": "2.3.*",
+    "phpcompatibility/php-compatibility": "9.3.*",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1"
+  },
+  "scripts": {
+    "lint": "phpcs --standard=.phpcs.xml .",
+    "beautify": "phpcbf --standard=.phpcs.xml ."
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
