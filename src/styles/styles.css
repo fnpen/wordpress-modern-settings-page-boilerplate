@@ -2,3 +2,21 @@
 @import 'layout.css';
 @import 'header.css';
 @import 'tabs.css';
+
+/* Fix to support markdown file */
+.reset-styles {
+	& code {
+		display: inline-block;
+	}
+
+	& ul {
+		margin-left: 1em;
+		margin-right: 1em;
+		padding-left: 40px;
+		list-style: initial;
+
+		& li {
+			line-height: 1.6;
+		}
+	}
+}

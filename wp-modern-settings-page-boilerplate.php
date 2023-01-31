@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Modern Settings Page Boilerplate for WP
+ * Plugin Name:       Modern Settings Page Boilerplate for WordPress
  * Plugin URI:
  * Description:
  *

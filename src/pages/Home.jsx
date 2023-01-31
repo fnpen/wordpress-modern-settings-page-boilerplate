@@ -77,7 +77,7 @@ export const Home = () => {
 					<Heading>{__('GitHub README.md', 'wp-modern-settings-page-boilerplate')}</Heading>
 				</CardHeader>
 				<CardBody>
-					<ReactMarkdown children={readMe} remarkPlugins={[remarkGfm]} />
+					<ReactMarkdown className="reset-styles" children={readMe} remarkPlugins={[remarkGfm]} />
 				</CardBody>
 			</Card>
 			<Spacer marginBottom={10} />

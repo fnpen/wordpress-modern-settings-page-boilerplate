@@ -1,9 +1,8 @@
 import defaultConfig from '@wordpress/scripts/config/webpack.config.js';
-import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
-import path from 'path';
-// const StatoscopeWebpackPlugin = require('@statoscope/webpack-plugin').default;
 import clone from 'deep-clone';
 import { config } from 'dotenv';
+import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
+import path from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -30,8 +29,6 @@ const createConfig = ({ name, entry, dir, externals }) => {
 				},
 				{
 					test: /\.md$/i,
-					// resourceQuery: /raw/,
-					// use: 'raw-loader',
 					type: 'asset/source',
 				},
 				...defaultConfig.module.rules,
@@ -73,9 +70,6 @@ const createConfig = ({ name, entry, dir, externals }) => {
 			extensions: ['.tsx', '.ts', '.js', '.jsx', '.json'],
 			alias: {
 				...defaultConfig.resolve.alias,
-				// 'react-refresh': false,
-				// 'react-refresh/runtime': false,
-				// '@wordpress/element': 'react',
 			},
 		},
 
@@ -89,8 +83,6 @@ const createConfig = ({ name, entry, dir, externals }) => {
 			...(externals || {}),
 		},
 
-		// plugins: [new StatoscopeWebpackPlugin(), ...defaultConfig.plugins],
-
 		output: {
 			...defaultConfig.output,
 			filename: '[name].js',
@@ -98,32 +90,16 @@ const createConfig = ({ name, entry, dir, externals }) => {
 		},
 
 		plugins: [
-			// ...defaultConfig.plugins,
 			new MiniCSSExtractPlugin({ filename: '[name].css' }),
 
 			...defaultConfig.plugins.filter(
-				(plugin) =>
-					!['LiveReloadPlugin'].includes(
-						//, 'DependencyExtractionWebpackPlugin'
-						plugin.constructor.name
-					)
+				(plugin) => !['LiveReloadPlugin'].includes(plugin.constructor.name)
 			),
-
-			// new DependencyExtractionWebpackPlugin({
-			// 	injectPolyfill: false,
-
-			// 	requestToExternal(request) {
-			// 		if ('@ultimate-tweaker/core' === request) {
-			// 			return 'UltimateTweakerCore';
-			// 		}
-			// 	},
-			// }),
 		],
 	};
 
 	if (!isProduction) {
 		config.devServer.host = '127.0.0.1';
-		// config.devServer.port = 8777;
 		config.devServer.allowedHosts = 'all';
 
 		config.devServer.server = {
