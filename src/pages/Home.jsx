@@ -6,7 +6,6 @@ import {
 	CardFooter,
 	CardHeader,
 	CardMedia,
-	Notice,
 	Panel,
 	PanelBody,
 	PanelRow,
@@ -16,27 +15,15 @@ import {
 } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
-import { useCallback, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { backendRequest } from '../utils/backendRequest';
+import { ClosableNotice } from '../components/ClosableNotice';
 import readMe from './../../README.md';
 
 export const Home = () => {
-	const [noticeVisible, setNoticeVisible] = useState(!MODERN_SETTINGS['notice_hidden']);
-
-	const doHideNotice = useCallback(async () => {
-		const { success } = await backendRequest({ action: 'modern-settings/hide-notice' });
-		setNoticeVisible(!!success);
-	}, [setNoticeVisible]);
-
 	return (
 		<>
-			{noticeVisible && (
-				<Notice onRemove={doHideNotice}>
-					{__('Thank you for trying this boilerplate!', 'wp-modern-settings-page-boilerplate')}
-				</Notice>
-			)}
+			<ClosableNotice />
 
 			<Heading>
 				{__('Card with Different Components', 'wp-modern-settings-page-boilerplate')}
@@ -52,7 +39,10 @@ export const Home = () => {
 					</p>
 					<p>
 						<span>
-							{__('The storybook of available components: ', 'wp-modern-settings-page-boilerplate')}
+							{__(
+								'The storybook of available components: ',
+								'wp-modern-settings-page-boilerplate'
+							)}
 						</span>
 						<a href="https://wordpress.github.io/gutenberg/" target="_blank">
 							https://wordpress.github.io/gutenberg/
@@ -74,17 +64,26 @@ export const Home = () => {
 			<Spacer marginBottom={10} />
 			<Card>
 				<CardHeader>
-					<Heading>{__('GitHub README.md', 'wp-modern-settings-page-boilerplate')}</Heading>
+					<Heading>
+						{__('GitHub README.md', 'wp-modern-settings-page-boilerplate')}
+					</Heading>
 				</CardHeader>
 				<CardBody>
-					<ReactMarkdown className="reset-styles" children={readMe} remarkPlugins={[remarkGfm]} />
+					<ReactMarkdown
+						className="reset-styles"
+						children={readMe}
+						remarkPlugins={[remarkGfm]}
+					/>
 				</CardBody>
 			</Card>
 			<Spacer marginBottom={10} />
 			<Card>
 				<CardHeader>
 					<Heading>
-						{__('Card with Different Components', 'wp-modern-settings-page-boilerplate')}
+						{__(
+							'Card with Different Components',
+							'wp-modern-settings-page-boilerplate'
+						)}
 					</Heading>
 				</CardHeader>
 				<CardBody>
@@ -109,7 +108,9 @@ export const Home = () => {
 				<CardBody></CardBody>
 				<CardDivider />
 				<CardBody>
-					<Text>{__('CardBody (after CardDivider)', 'wp-modern-settings-page-boilerplate')}</Text>
+					<Text>
+						{__('CardBody (after CardDivider)', 'wp-modern-settings-page-boilerplate')}
+					</Text>
 				</CardBody>
 				<CardMedia>
 					<img
@@ -117,9 +118,11 @@ export const Home = () => {
 						src="https://images.unsplash.com/photo-1566125882500-87e10f726cdc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1867&q=80"
 					/>
 				</CardMedia>
-				<CardFooter>
+				<CardFooter className="components-card-footer--sticky">
 					<Text>{__('CardFooter', 'wp-modern-settings-page-boilerplate')}</Text>
-					<Button variant="link">{__('Link Button', 'wp-modern-settings-page-boilerplate')}</Button>
+					<Button variant="link">
+						{__('Link Button', 'wp-modern-settings-page-boilerplate')}
+					</Button>
 					<Button variant="secondary">
 						{__('Secondary Button', 'wp-modern-settings-page-boilerplate')}
 					</Button>

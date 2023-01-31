@@ -5,7 +5,6 @@ Creating the boilerplate of plugin or theme settings page using WordPress packag
 # What's inside
 
 * 🤹🏻  Keep as simple as possible
-	* No state manager in boilerplate - it's recommended on your project, but you can use whether or not as you like.
 
 * 👥  Close design and UX to WordPress and Gutenberg
 	* 🥞  Components from **@wordpress/components**.
@@ -20,6 +19,13 @@ Creating the boilerplate of plugin or theme settings page using WordPress packag
 
 * ⚡  Great developer experience
 	* 🚀 Supports React Hot Module Reload to refresh components without reloading the page.
+
+* ☄️ Effector state manager - it's effective state manager without big boilerplate of code and clean
+
+* Notifications
+
+* Form Examples
+	* Simple form - form with couple fields.
 
 * 🔬  Coding standarts
 	* Phpcs and wp-coding-standards is available

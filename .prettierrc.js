@@ -8,7 +8,7 @@ module.exports = {
 	...wordPressConfig,
 	printWidth: 100,
 	useTabs: true,
-	tabWidth: 2,
+	tabWidth: 4,
 	overrides: [
 		{
 			files: '*.json',

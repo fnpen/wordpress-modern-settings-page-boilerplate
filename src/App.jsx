@@ -1,4 +1,5 @@
 import { __ } from '@wordpress/i18n';
+
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { Settings } from './pages/Settings';
@@ -10,10 +11,13 @@ export const App = () => {
 			title={__('Modern Settings 🚀', 'wp-modern-settings-page-boilerplate')}
 			tabs={[
 				{ name: 'home', title: __('Home', 'wp-modern-settings-page-boilerplate') },
-				{ name: 'settings', title: __('Settings', 'wp-modern-settings-page-boilerplate') },
 				{
-					name: 'policy',
-					title: __('Policy Guide', 'wp-modern-settings-page-boilerplate'),
+					name: 'settings',
+					title: __('Settings', 'wp-modern-settings-page-boilerplate'),
+				},
+				{
+					name: 'help',
+					title: __('Help', 'wp-modern-settings-page-boilerplate'),
 				},
 			]}
 		>

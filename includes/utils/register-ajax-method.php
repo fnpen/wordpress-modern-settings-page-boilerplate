@@ -13,7 +13,7 @@ namespace ModernSettingsPageBoilerplate {
 
 	function register_ajax_method( $action, $method ) {
 		add_action(
-			'wp_ajax_modern-settings/' . $action,
+			'wp_ajax_' . $action,
 			function() use ( $method ) {
 				if ( ! isset( $_REQUEST['_wpnonce'] ) || ! wp_verify_nonce( sanitize_key( $_REQUEST['_wpnonce'] ), NONCE_ACTION ) ) {
 					die( esc_html__( 'Security check', 'wp-modern-settings-page-boilerplate' ) );

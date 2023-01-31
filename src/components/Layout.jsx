@@ -1,5 +1,6 @@
 import { __experimentalHeading as Heading } from '@wordpress/components';
 import { useMemo, useState } from 'react';
+import { Notifications } from './Notifications';
 
 import { Tab } from './Tab';
 import { Tabs } from './Tabs';
@@ -24,6 +25,7 @@ export const Layout = ({ title, children, tabs = [] }) => {
 			<div className="modern-settings-layout-body hide-if-no-js">
 				{useMemo(() => children({ selectedTab }), [selectedTab])}
 			</div>
+			<Notifications />
 		</div>
 	);
 };
